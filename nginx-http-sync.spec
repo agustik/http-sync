@@ -48,7 +48,6 @@ cp nginx-sync.service %{buildroot}%{_unitdir}/nginx-sync.service
 
 cp -av lib/ %{buildroot}/%{_datadir}/%{name}
 
-cp config.js %{buildroot}/%{_datadir}/%{name}
 cp index.js %{buildroot}/%{_datadir}/%{name}
 cp package.json %{buildroot}/%{_datadir}/%{name}
 cp service.js %{buildroot}/%{_datadir}/%{name}
@@ -64,7 +63,7 @@ rm -rf %{buildroot}
 
 %files
 %defattr(644, root, root, 755)
-%doc README.md LICENSE.txt
+%doc LICENSE.md README.md
 %{_datadir}/%{name}
 %dir %{_sysconfdir}/%{name}
 %config(noreplace) %{_sysconfdir}/%{name}/config.js
