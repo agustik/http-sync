@@ -1,0 +1,12 @@
+[Service]
+ExecStart=/usr/bin/node /home/srv-node-sample/service.js
+Restart=always
+StandardOutput=syslog
+StandardError=syslog
+SyslogIdentifier=nginx-sync
+User=nginx
+Group=nginx
+Environment=NODE_ENV=production
+
+[Install]
+WantedBy=multi-user.target

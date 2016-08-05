@@ -1,0 +1,5 @@
+var config = {
+  server : 'http://localhost',
+};
+
+module.exports = config;

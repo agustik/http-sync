@@ -1,0 +1,20 @@
+{
+  "name": "nginx-http-sync",
+  "version": "1.0.0",
+  "description": "sync local dir with NGINX autoindex",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "NGINX",
+    "index",
+    "http"
+  ],
+  "author": "Ágúst Ingi Kjartansson",
+  "license": "GPL-2.0",
+  "dependencies": {
+    "request": "^2.73.0",
+    "userid": "^0.2.0"
+  }
+}
