@@ -3,7 +3,7 @@ ExecStart=/usr/bin/node /home/srv-node-sample/service.js
 Restart=always
 StandardOutput=syslog
 StandardError=syslog
-SyslogIdentifier=nginx-sync
+SyslogIdentifier=http-sync
 User=nginx
 Group=nginx
 Environment=NODE_ENV=production

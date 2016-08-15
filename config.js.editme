@@ -1,5 +1,14 @@
 var config = {
-  server : 'http://localhost',
+  server : 'http://foo.com',
+  interval : 5 * 1000,
+  directory : './remote',
+  force: true,
+  owner : 'nginx',
+  group : 'nginx',
+  auth : {
+    username : '',
+    password : ''
+  }
 };
 
 module.exports = config;

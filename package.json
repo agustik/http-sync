@@ -1,5 +1,5 @@
 {
-  "name": "nginx-http-sync",
+  "name": "http-sync",
   "version": "1.0.0",
   "description": "sync local dir with NGINX autoindex",
   "main": "index.js",
@@ -14,6 +14,7 @@
   "author": "Ágúst Ingi Kjartansson",
   "license": "GPL-3.0",
   "dependencies": {
+    "cheerio": "^0.20.0",
     "request": "^2.73.0",
     "userid": "^0.2.0"
   }

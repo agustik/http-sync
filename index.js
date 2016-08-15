@@ -12,8 +12,25 @@ var owner = argv.o;
 
 var force = argv.f || argv.force || false;
 
+var dry = argv.dry || false;
+
 var group = argv.g;
 var headers = argv.H || [];
+
+var auth = false;
+
+
+var username = argv.u || argv.username || false;
+
+var password = argv.p || argv.password || false;
+
+
+if (username || password) {
+  auth = {
+    username : username,
+    password : password
+  };
+}
 
 if (argv.help || argv.h){
   return console.log(
@@ -29,7 +46,9 @@ var walker = new nginxWalker(server, directory, {
   force : force,
   headers : headers,
   owner : owner,
-  group : group
+  group : group,
+  auth : auth,
+  dry : dry
 });
 
 walker.walk();
