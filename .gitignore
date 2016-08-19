@@ -1,2 +1,8 @@
 node_modules/
 config.js
+test/
+mock/
+remote/
+*.rpm
+*.gz
+*.tar

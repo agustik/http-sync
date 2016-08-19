@@ -1,0 +1,24 @@
+{
+  "name": "http-sync",
+  "license": "GPL-3.0",
+  "version": "1.0.0",
+  "description": "sync local dir with NGINX autoindex",
+  "buildrequires": "npm git",
+  "summary": "HTTP sync client",
+  "requires": "nodejs",
+  "build": "npm install",
+  "config": "true",
+  "folders": [
+    "lib"
+  ],
+  "files": [
+    "index.js",
+    "package.json",
+    "service.js"
+  ],
+  "repo": "https://github.com/agustik",
+  "systemd": "http-sync.service",
+  "is_systemd": true,
+  "is_config": true,
+  "docs": "LICENSE.txt README.md"
+}
