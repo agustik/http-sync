@@ -8,7 +8,8 @@ var walker = new nginxWalker(config.server, config.directory, {
   force : config.force || false,
   headers : config.headers || [],
   owner : config.owner || false,
-  group : config.group || false
+  group : config.group || false,
+  auth : config.auth
 });
 
 
