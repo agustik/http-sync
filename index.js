@@ -3,6 +3,8 @@
 
 var nginxWalker = require('./lib/nginx-walker.js');
 
+var fs = require('fs');
+
 var argv = require('yargs').argv;
 
 var server = argv._[0] || false;
@@ -32,9 +34,39 @@ if (username || password) {
   };
 }
 
+function exists(pathToConfig){
+  try {
+    fs.readFileSync(pathToConfig);
+    return true;
+  } catch (e) {
+    return false;
+  }
+}
+
+var command = argv['$0'];
+
+if (argv.config){
+  var pathToConfig = argv.config;
+  if (!exists(pathToConfig)) return console.log('Could not read config file');
+
+  var config = require(pathToConfig);
+
+
+  if (config){
+    force     =  config.force;
+    owner     =  config.owner;
+    group     =  config.group;
+    auth      =  config.auth;
+    dry       =  config.dry;
+    server    =  config.server;
+    director  =  config.directory;
+  }
+}
+
+
 if (argv.help || argv.h){
   return console.log(
-    argv['$0'], 'server directory [-og]'.join('')
+    command, 'server directory [-og]'.join('')
   );
 }
 if (!server){
