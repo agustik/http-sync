@@ -66,7 +66,7 @@ if (argv.config){
 
 if (argv.help || argv.h){
   return console.log(
-    command, 'server directory [-og]'.join('')
+    command, '<server> <local directory> [-u username -p password -f|--force -o owner -g group --dry --config /configfile.js ]'
   );
 }
 if (!server){
