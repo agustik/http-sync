@@ -76,16 +76,6 @@ if (!server){
   return console.log('No server specified');
 }
 
-
-return console.log(server, directory,{
-  force : force,
-  headers : headers,
-  owner : owner,
-  group : group,
-  auth : auth,
-  dry : dry
-});
-
 var walker = new nginxWalker(server, directory, {
   force : force,
   headers : headers,
