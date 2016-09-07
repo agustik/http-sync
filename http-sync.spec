@@ -16,7 +16,7 @@ BuildRequires: systemd
 
 
 Name:     http-sync
-Version:	1.1.0
+Version:	1.1.1
 Release:	1%{?dist}
 Summary:	HTTP sync client
 
